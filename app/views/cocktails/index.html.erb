@@ -10,11 +10,11 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">About</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          Menu
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">Action</a>
@@ -22,9 +22,6 @@
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -36,13 +33,25 @@
 
 
 <h1 class="text-center">Cocktails</h1>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/340996/pexels-photo-340996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+  Jack Rabbit Slim's
+</div>
 
+
+  <div class="card">
     <ul class="list-inline card">
       <% @cocktails.each do |cocktail| %>
-        <p><%= link_to cocktail.name, cocktails_path(cocktail) %></p>
+      <p><%= link_to cocktail.name, cocktails_path(cocktail) %></p>
       <% end %>
     </ul>
+  </div>
 
+<!--   <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="https://images.unsplash.com/photo-1531387367216-681093c0279b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2032&q=80" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div> -->
 <div class="card-deck">
   <div class="card">
     <img class="card-img-top" src="https://images.unsplash.com/photo-1531387367216-681093c0279b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2032&q=80" alt="Card image cap">
@@ -74,12 +83,34 @@
       <small class="text-muted">Last updated 3 mins ago</small>
     </div>
   </div>
+    <div class="card">
+    <img class="card-img-top" src="https://images.unsplash.com/photo-1541546339599-ecdbfcf77378?ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Bloody Mary</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
 </div>
 
 <div>
   <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-success" %>
 </div>
 
+<!-- <div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
+</div> -->
 
 
 <!-- <div class="card" style="width: 18rem;">
