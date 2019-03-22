@@ -1,3 +1,10 @@
-<%= render 'form', cocktail: @cocktail %>
-<br>
-<%= link_to "Home", cocktails_path %>
+<div class="container">
+  <div class="new-cocktail-container">
+    <div class="new-cocktail-form">
+      <%= render 'form', cocktail: @cocktail %>
+      <br>
+      <br>
+      <%= link_to "Home", cocktails_path, class: "btn btn-secondary" %>
+    </div>
+  </div>
+</div>

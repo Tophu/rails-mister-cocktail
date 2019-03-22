@@ -1,43 +1,14 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><i class="fas fa-cocktail"></i>Passione</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<!-- <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/340996/pexels-photo-340996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+  <h1 class="text-center">Passione</h1>
+</div> -->
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Menu
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/340996/pexels-photo-340996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+  <div class="headers-text">
+    <h1>Passione</h1>
   </div>
-</nav>
-
-
-<h1 class="text-center">Passione</h1>
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/340996/pexels-photo-340996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
-  Jack Rabbit Slim's
 </div>
 
-
+<div class="container">
   <div class="card">
     <ul class="list-inline card">
       <% @cocktails.each do |cocktail| %>
@@ -45,6 +16,12 @@
       <% end %>
     </ul>
   </div>
+  <div>
+    <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-success" %>
+  </div>
+
+</div>
+
 
 <!--   <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="https://images.unsplash.com/photo-1531387367216-681093c0279b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2032&q=80" alt="Card image cap">
@@ -53,52 +30,7 @@
   </div>
 </div> -->
 
-<div class="card-deck">
-  <div class="card">
-    <img class="card-img-top" src="https://images.unsplash.com/photo-1531387367216-681093c0279b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2032&q=80" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Mojito</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="https://images.unsplash.com/photo-1541807243774-518bdde38627?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1347&q=80" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Martini</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="https://ak8.picdn.net/shutterstock/videos/31037458/thumb/1.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Daiquiri</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-    <div class="card">
-    <img class="card-img-top" src="https://images.unsplash.com/photo-1541546339599-ecdbfcf77378?ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Bloody Mary</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-</div>
 
-<div>
-  <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-success" %>
-</div>
 
 <!-- <div class="footer">
   <div class="footer-links">

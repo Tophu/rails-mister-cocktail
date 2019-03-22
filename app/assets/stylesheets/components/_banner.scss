@@ -1,0 +1,14 @@
+.banner {
+  height: 30vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  .headers-text {
+    display: flex;
+    h1 {
+    align-content: baseline;
+    color: white;
+    margin: 0;
+    }
+  }
+}
