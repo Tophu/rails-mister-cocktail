@@ -4,8 +4,7 @@ class Cocktail < ApplicationRecord
   has_many :reviews, dependent: :destroy
   validates :name, presence: true, uniqueness: true
 
-  # mount_uploader :photo, PhotoUploader
+  mount_uploader :photo, PhotoUploader
     # PUT THESE IN 'views/cocktails/_form.html.erb' AND FIX
-    # <%= f.input :photo %>
-    # <%= f.input :photo_cache, as: :hidden %>
+
 end
