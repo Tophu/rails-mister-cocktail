@@ -62,3 +62,6 @@ gem 'rails-controller-testing', group: [ :test ]
 # Photo upload with carrierwave and cloudinary
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary'
+
+# Secret keys for security
+gem 'dotenv-rails', groups: [:development, :test]
