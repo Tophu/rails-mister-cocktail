@@ -59,6 +59,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
 
-# Photo upload with carrierwave and cloduinary
+# Photo upload with carrierwave and cloudinary
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary'
