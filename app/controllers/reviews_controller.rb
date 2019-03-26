@@ -1,4 +1,9 @@
 class ReviewsController < ApplicationController
+  def new
+    @cocktail = Cocktail.find(params[:cocktail_id])
+    @review = Review.new
+  end
+
   def create
     @cocktail = Cocktail.find(params[:cocktail_id])
     @review = Review.new(review_params)
@@ -7,13 +12,13 @@ class ReviewsController < ApplicationController
       redirect_to cocktail_path(@cocktail)
     else
       @dose = Dose.new
-      render "cocktails/new"
+      render 'cocktails/show'
     end
   end
 
   private
 
   def review_params
-    params.require(:review).permit(:rating, :content)
+    params.require(:review).permit(:rating, :description)
   end
 end

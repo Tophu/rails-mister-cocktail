@@ -4,11 +4,12 @@
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/340996/pexels-photo-340996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
   <div class="headers-text">
-    <h1>Passione</h1>
+    <h1>Paris by Night</h1>
   </div>
 </div>
 
 <div class="container">
+  <div class="row">
     <% @cocktails.each do |cocktail| %>
       <% unless cocktail.photo.blank? %>
       <div class="col-xs-12 col-sm-6 col-md-3">
@@ -21,6 +22,7 @@
         </div>
       <% end %>
     <% end %>
+  </div>
     <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-success" %>
 </div>
 
