@@ -2,42 +2,28 @@
   <h1 class="text-center">Passione</h1>
 </div> -->
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path 'pexels-photo-340996' %>')">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/340996/pexels-photo-340996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
   <div class="headers-text">
     <h1>Passione</h1>
   </div>
 </div>
 
 <div class="container">
-  <div class="row">
-  <div class="row">
     <% @cocktails.each do |cocktail| %>
+      <% unless cocktail.photo.blank? %>
       <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
-
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill%>');">
           <div class="card-description">
             <h2><%= cocktail.name %></h2>
           </div>
-          <%= link_to "", cocktail_path(cocktail), class: 'card-link' %>
+            <%= link_to "", cocktail_path(cocktail), class: 'card-link' %>
+          </div>
         </div>
-      </div>
-    <% end %>
-  </div>
-  </div>
-
-  <div class="temp-card">
-    <ul class="list-inline card">
-      <% @cocktails.each do |cocktail| %>
-      <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
       <% end %>
-    </ul>
-  </div>
-  <div>
+    <% end %>
     <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-success" %>
-  </div>
-<%= cl_image_tag("Margarita-720x720-recipe-v2",
-      width: 400, height: 300, crop: :fill) %>
 </div>
+
 
 
 <!--   <div class="card" style="width: 18rem;">
