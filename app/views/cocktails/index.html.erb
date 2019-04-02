@@ -1,64 +1,27 @@
-<!-- <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/340996/pexels-photo-340996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
-  <h1 class="text-center">Passione</h1>
-</div> -->
-
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/340996/pexels-photo-340996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,-0.3)), url(https://res.cloudinary.com/tophu/image/upload/v1554240171/Beverages_edited_v3.jpg)">
   <div class="headers-text">
     <h1>Paris by Night</h1>
   </div>
 </div>
 
 <div class="container">
-  <div class="row">
+  <br>
+  <div class="cards">
     <% @cocktails.each do |cocktail| %>
       <% unless cocktail.photo.blank? %>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo.url, height: 300, width: 400, crop: :fill%>');">
+
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo.url, crop: :fill%>');">
           <div class="card-description">
             <h2><%= cocktail.name %></h2>
           </div>
             <%= link_to "", cocktail_path(cocktail), class: 'card-link' %>
           </div>
-        </div>
+
       <% end %>
     <% end %>
   </div>
+  <br>
+  <div class="home-btn">
     <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-success" %>
-</div>
-
-
-
-<!--   <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="https://images.unsplash.com/photo-1531387367216-681093c0279b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2032&q=80" alt="Card image cap">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div> -->
-
-
-
-<!-- <div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
-  </div>
-</div> -->
-
-
-<!-- <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="https://images.unsplash.com/photo-1531387367216-681093c0279b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2032&q=80" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Mojito</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
- -->
-
-<!-- fixing the security warnings from Github concerning webpacker -->
