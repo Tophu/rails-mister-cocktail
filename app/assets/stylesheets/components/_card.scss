@@ -1,5 +1,11 @@
+.cards {
+  display: grid;
+  grid-gap: 22px;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+}
 .card {
-  height: 175px;
+  min-height: 280px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;

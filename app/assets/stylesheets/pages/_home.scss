@@ -1,4 +1,10 @@
 // Specific CSS for your home-page
 .container {
   margin-bottom: 100px;
+  width: 100%;
+}
+
+.home-btn {
+  display: flex;
+  justify-content: center;
 }
