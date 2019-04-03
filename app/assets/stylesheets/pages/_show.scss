@@ -34,6 +34,20 @@
   }
 }
 
-.fa-star {
-  color: black;
+.badge {
+  background-color: white;
+  .fa-star {
+    color: #1EDD88;
+    margin-right: 5px;
+  }
+}
+
+.fa-trash {
+  color: gray;
+}
+tr {
+  text-align: center;
+  td {
+    text-align: center;
+  }
 }
