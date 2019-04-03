@@ -1,11 +1,14 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,-0.3)), url(https://res.cloudinary.com/tophu/image/upload/v1554240171/Beverages_edited_v3.jpg)">
-  <div class="headers-text">
-    <h1>Paris by Night</h1>
-  </div>
+  <h1>Paris by Night</h1>
 </div>
-
+<!-- <div class="javascript-down-btn">
+  <i class="fas fa-chevron-down fa-4x" onclick="scrollToBottom()"></i>
+</div>
+ -->
 <div class="container">
   <br>
+  <div id="content">
+
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
       <% unless cocktail.photo.blank? %>
@@ -24,4 +27,13 @@
   <div class="home-btn">
     <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-success" %>
   </div>
+  </div>
 </div>
+
+<!-- <script>
+  var elmnt = document.getElementById("content");
+  function scrollToBottom() {
+    elmnt.scrollIntoView({behavior: "smooth"}); // Bottom
+  }
+</script>
+ -->

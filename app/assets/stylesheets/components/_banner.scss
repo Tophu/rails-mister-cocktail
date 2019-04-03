@@ -3,18 +3,28 @@
   background-size: cover;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-position-y: 97%;
   width: 100%;
-  .headers-text {
-    display: flex;
-    align-items: center;
-    h1 {
+  h1 {
     align-content: baseline;
     color: white;
     margin: 0;
-    }
+  }
+  .headers-text {
+    display: flex;
+    align-items: center;
   }
 }
+
+  .javascript-down-btn {
+    display: flex;
+    justify-content: center;
+    .fa-chevron-down {
+      color: black;
+      opacity: 0.5;
+    }
+  }
 
 @media (min-width: 480px) {
   .banner { height: 35vh; }
