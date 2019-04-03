@@ -1,0 +1,53 @@
+.cocktail-show-container {
+  display: flex;
+  justify-content: center;
+  #cocktail-show-header {
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+    margin-bottom: 30px;
+    fit-object: cover;
+    h1 {
+      color: white;
+    }
+  }
+}
+
+.col-xs-12 {
+  padding: 0 15px 0 15px;
+
+}
+
+.col-sm-12 {
+  padding: 0 15px 0 15px;
+}
+.edit-cocktail-container {
+  display: flex;
+  align-items: flex-end;
+  padding: 0 15px 0 15px;
+  .btn-success {
+    margin-right: 20px;
+    width: 132px;
+  }
+}
+
+.badge {
+  background-color: white;
+  .fa-star {
+    color: #1EDD88;
+    margin-right: 5px;
+  }
+}
+
+.fa-trash {
+  color: gray;
+}
+tr {
+  text-align: center;
+  td {
+    text-align: center;
+  }
+}

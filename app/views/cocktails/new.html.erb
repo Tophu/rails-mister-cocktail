@@ -1,11 +1,13 @@
 <div class="container">
-  <h1>Create a cocktail</h1>
+  <div class="new-cocktail-form">
+    <h1>Create a cocktail</h1>
 
-  <%= simple_form_for [@cocktail] do |f| %>
-    <%= f.input :name, placeholder: "Pina Colada" %>
+    <%= simple_form_for [@cocktail] do |f| %>
+      <%= f.input :name, placeholder: "Pina Colada" %>
 
-    <%= f.input :photo %>
-    <%= f.input :photo_cache, as: :hidden %>
-    <%= f.submit "Submit", class: "btn btn-primary" %>
-  <% end %>
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
+      <%= f.submit "Submit", class: "btn btn-success" %>
+    <% end %>
+  </div>
 </div>
