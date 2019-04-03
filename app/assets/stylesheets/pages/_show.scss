@@ -1,0 +1,21 @@
+#cocktail-show {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  // width: 50%;
+  fit-object: cover;
+}
+
+.col-xs-12 {
+  padding: 0 15px 0 0;
+}
+
+.col-sm-12 {
+  padding: 0 15px 0 0;
+}
+.edit-cocktail-container {
+  .btn-success {
+    padding-right: 20px;
+  }
+}
+
