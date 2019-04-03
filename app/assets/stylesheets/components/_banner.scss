@@ -10,6 +10,8 @@
     align-content: baseline;
     color: white;
     margin: 0;
+    .banner-logo {
+    }
   }
   .headers-text {
     display: flex;
@@ -26,8 +28,8 @@
     }
   }
 
-@media (min-width: 480px) {
-  .banner { height: 35vh; }
+@media (min-width: 440px) {
+  .banner { height: 30vh; }
 }
 
 @media (min-width: 768px) {
@@ -54,3 +56,12 @@
   .banner { height: 95vh; }
 }
 
+
+
+@media (min-width: 440px) {
+  .banner-logo { height: 30vh; }
+}
+
+@media (min-width: 768px) {
+  .banner-logo { height: 42vh; }
+}
